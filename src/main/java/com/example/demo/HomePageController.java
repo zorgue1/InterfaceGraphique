@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.model.Game;
 import javafx.event.ActionEvent;
 
 import java.io.IOException;
@@ -9,11 +10,14 @@ public class HomePageController {
 
     HelloApplication helloApplication;
 
+    Game game;
+
     private HomePageVue homePageVue;
 
-    public HomePageController(HomePageVue homePageVue, HelloApplication helloApplication){
+    public HomePageController(HomePageVue homePageVue, Game game, HelloApplication helloApplication){
         this.helloApplication = helloApplication;
         this.homePageVue = homePageVue;
+        this.game = game;
         homePageVue.getStylesheets().add(
                 Objects.requireNonNull(
                         getClass()
@@ -22,6 +26,7 @@ public class HomePageController {
         );
         homePageVue.exitButton.setOnAction(this::exitGame);
         homePageVue.playButton.setOnAction(this::changeView);
+        homePageVue.welcomeText.setText(this.game.getStory().instruction());
     }
 
     public void exitGame(ActionEvent e)  {

@@ -19,7 +19,7 @@ public class NameController {
                             .getResource("style.css")
             ).toExternalForm()
         );
-        nameVue.nextButton.setOnAction(this::onWelcomeAction);
+        nameVue.nextButton.setOnAction(this::changeView);
         nameVue.changeButton.setOnAction(this::changeView);
         nameVue.exitButton.setOnAction(this::exitGame);
     }
@@ -32,6 +32,7 @@ public class NameController {
     private void changeView(ActionEvent e) {
 
         helloApplication.showAnotherScene();
+        helloApplication.showCombat1();
     }
 
     public void exitGame(ActionEvent e)  {
