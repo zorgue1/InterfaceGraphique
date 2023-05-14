@@ -49,7 +49,7 @@ public class HomePageVue extends Pane {
         welcomeText.setLayoutY(50); // Position en haut
 
         welcomeText.setStyle("-fx-text-fill: red;");
-        welcomeText.setFont(new Font(20));
+        welcomeText.setFont(new Font(40));
 
         exitButton.setStyle("-fx-text-fill: black;");
         exitButton.setFont(new Font(20));
