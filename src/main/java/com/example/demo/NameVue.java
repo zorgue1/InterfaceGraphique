@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -12,14 +13,18 @@ import javafx.scene.text.Font;
 public class NameVue extends Pane {
 
 
-    Label welcomeText = new Label("welcome to my office young wizard");
+    Label welcomeText = new Label();
+    Label wizard = new Label();
 
     TextField textField = new TextField("What is your wizard's name ?");
 
+    Button okButton = new Button ("     OK     ");
     Button nextButton = new Button("Next step");
     Button exitButton = new Button("exit");
 
     Button changeButton = new Button("Want to see some change?");
+
+    VBox bottomBox = new VBox();
 
 
     public NameVue() {
@@ -28,7 +33,12 @@ public class NameVue extends Pane {
 
         this.getChildren().add(backgroundImageView);
 
-        this.getChildren().addAll(welcomeText, textField, nextButton, exitButton);
+        bottomBox.getChildren().addAll(welcomeText, wizard);
+        bottomBox.setSpacing(30);
+        bottomBox.setPadding(new Insets(0, 0, 50, 0)); // ajustez les marges selon vos besoins
+        bottomBox.setStyle("-fx-background-color: white;"); // définir la couleur d'arrière-plan du VBox
+
+        this.getChildren().addAll(textField, nextButton,okButton, exitButton,bottomBox);
 
 
     }
@@ -45,14 +55,23 @@ public class NameVue extends Pane {
         nextButton.setLayoutX(centerX - nextButton.getWidth() / 2);
         nextButton.setLayoutY(centerY - nextButton.getHeight() / 2);
 
+        okButton.setLayoutX(centerX - okButton.getWidth() / 2);
+        okButton.setLayoutY(centerY - okButton.getHeight() / 2);
+
         exitButton.setLayoutX(centerX - exitButton.getWidth() / 2);
         exitButton.setLayoutY(centerY + exitButton.getHeight() / 2);
 
         welcomeText.setLayoutX((getWidth() - welcomeText.getWidth()) / 2);
         welcomeText.setLayoutY(50); // Position en haut
 
-        welcomeText.setStyle("-fx-text-fill: red;");
-        welcomeText.setFont(new Font(40));
+        welcomeText.setStyle("-fx-text-fill: black;");
+        welcomeText.setFont(new Font(15));
+        wizard.setStyle("-fx-text-fill: red;");
+        wizard.setFont(new Font(15));
+
+
+        bottomBox.setLayoutX(centerX - bottomBox.getWidth() / 2);
+        bottomBox.setLayoutY(getHeight() - bottomBox.getHeight());
 
     }
 

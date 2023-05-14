@@ -10,6 +10,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 public class HelloApplication extends Application {
     Stage stage;
@@ -33,6 +34,15 @@ public class HelloApplication extends Application {
         stage.show();
     }
 
+    public void showInstructionScene() {
+        InstructionVue instructionVue = new InstructionVue();
+        InstructionController instructionController = new InstructionController(instructionVue,game,this);
+        Scene scene = new Scene(instructionVue, 1366, 768);
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.show();
+    }
+
 
     public void showCombat1() {
         Combat1Vue combat1Vue = new Combat1Vue();
@@ -46,7 +56,7 @@ public class HelloApplication extends Application {
 
     public void showBureauD(){
         NameVue nameVue =  new NameVue();
-        NameController nameController = new NameController(nameVue, this);
+        NameController nameController = new NameController(nameVue,game, this);
         Scene scene = new Scene(nameVue, 1366, 768);
         stage.setTitle("Wizard's name");
         stage.setScene(scene);

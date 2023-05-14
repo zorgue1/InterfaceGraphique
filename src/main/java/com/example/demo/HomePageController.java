@@ -26,7 +26,6 @@ public class HomePageController {
         );
         homePageVue.exitButton.setOnAction(this::exitGame);
         homePageVue.playButton.setOnAction(this::changeView);
-        homePageVue.welcomeText.setText(this.game.getStory().instruction());
     }
 
     public void exitGame(ActionEvent e)  {
@@ -35,7 +34,7 @@ public class HomePageController {
 
     private void changeView(ActionEvent e) {
 
-        helloApplication.showBureauD();
+        helloApplication.showInstructionScene();
     }
 
 
