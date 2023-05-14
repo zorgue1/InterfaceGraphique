@@ -58,8 +58,6 @@ public class NameVue extends Pane {
         okButton.setLayoutX(centerX - okButton.getWidth() / 2);
         okButton.setLayoutY(centerY - okButton.getHeight() / 2);
 
-        exitButton.setLayoutX(centerX - exitButton.getWidth() / 2);
-        exitButton.setLayoutY(centerY + exitButton.getHeight() / 2);
 
         welcomeText.setLayoutX((getWidth() - welcomeText.getWidth()) / 2);
         welcomeText.setLayoutY(50); // Position en haut
@@ -71,7 +69,7 @@ public class NameVue extends Pane {
 
 
         bottomBox.setLayoutX(centerX - bottomBox.getWidth() / 2);
-       // bottomBox.setLayoutY(getHeight() - bottomBox.getHeight());
+
 
     }
 

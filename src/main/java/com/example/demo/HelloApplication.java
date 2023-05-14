@@ -46,8 +46,17 @@ public class HelloApplication extends Application {
 
     public void showCombat1() {
         Combat1Vue combat1Vue = new Combat1Vue();
-        Combat1Controller combat1Controller = new Combat1Controller(combat1Vue,this);
+        Combat1Controller combat1Controller = new Combat1Controller(combat1Vue,game,this);
         Scene scene = new Scene(combat1Vue, 1366, 768);
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void showCombat2() {
+        Combat2Vue combat2Vue = new Combat2Vue();
+        Combat2Controller combat2Controller = new Combat2Controller(combat2Vue,game,this);
+        Scene scene = new Scene(combat2Vue, 1366, 768);
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();

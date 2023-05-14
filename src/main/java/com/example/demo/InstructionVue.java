@@ -44,8 +44,6 @@ public class InstructionVue extends Pane{
         understandButton.setLayoutX(centerX - understandButton.getWidth() / 2);
         understandButton.setLayoutY(centerY - understandButton.getHeight() / 2);
 
-        exitButton.setLayoutX(centerX - exitButton.getWidth() / 2);
-        exitButton.setLayoutY(centerY + exitButton.getHeight());
 
         exitButton.setStyle("-fx-text-fill: black;");
         exitButton.setFont(new Font(20));
