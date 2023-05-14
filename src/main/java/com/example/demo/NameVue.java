@@ -71,7 +71,7 @@ public class NameVue extends Pane {
 
 
         bottomBox.setLayoutX(centerX - bottomBox.getWidth() / 2);
-        bottomBox.setLayoutY(getHeight() - bottomBox.getHeight());
+       // bottomBox.setLayoutY(getHeight() - bottomBox.getHeight());
 
     }
 

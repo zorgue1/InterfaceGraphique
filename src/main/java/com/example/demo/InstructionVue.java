@@ -29,9 +29,9 @@ public class InstructionVue extends Pane{
         bottomBox.getChildren().addAll(welcomeText);
         bottomBox.setSpacing(20);
         bottomBox.setPadding(new Insets(0, 0, 50, 0)); // ajustez les marges selon vos besoins
-        bottomBox.setStyle("-fx-background-color: white;"); // définir la couleur d'arrière-plan du VBox
+        bottomBox.setStyle("-fx-background-color: grey;"); // définir la couleur d'arrière-plan du VBox
 
-        this.getChildren().addAll(understandButton,exitButton, bottomBox);
+        this.getChildren().addAll(understandButton,exitButton, welcomeText);
     }
 
     @Override
@@ -53,9 +53,9 @@ public class InstructionVue extends Pane{
         understandButton.setFont(new Font(20));
 
         welcomeText.setStyle("-fx-text-fill: red;");
-        welcomeText.setFont(new Font(15));
+        welcomeText.setFont(new Font(25));
 
-        bottomBox.setLayoutX(centerX - bottomBox.getWidth() / 2);
-        bottomBox.setLayoutY(getHeight() - bottomBox.getHeight());
+        welcomeText.setLayoutX(centerX - welcomeText.getWidth() / 2);
+        //bottomBox.setLayoutY(getHeight() - bottomBox.getHeight());
     }
 }
